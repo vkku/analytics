@@ -54,3 +54,7 @@ plot(ROCperf, colorize = TRUE, print.cutoffs.at = seq(0, 1, 0.1), text.adj = c(0
 
 predictTest <- predict(qualityLog, type = "response", newdata = qualityTest)
 summary(predictTest)
+
+#Calculating AUC
+auc.perf <- performance(ROCpred, measure = "auc")
+auc.perf
